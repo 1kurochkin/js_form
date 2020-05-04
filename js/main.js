@@ -6,7 +6,8 @@ $(document).ready(function() {
 	const hidden = document.querySelector('.hidden')
 	const body = document.body
 	const modalWindow = document.querySelector('.modal_wrapper')
-	const selectBox = document.querySelector('.selectBox')
+	const products = document.querySelector('.selectBox')
+	const selectBox = document.querySelector('select')
 	const checkboxes = document.getElementById("checkboxes");
 // ----------------STATE-------------------------//
 	let state = {
@@ -154,7 +155,7 @@ $(document).ready(function() {
 			expanded = false;
 		}
 	}
-	selectBox.onclick = (event) => showCheckboxes()
+	products.onclick = (event) => showCheckboxes()
 // ----------------LISTENERS------------------//
 	body.addEventListener('click', e => {
 		if (e.target.className === 'modal_btn') {
