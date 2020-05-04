@@ -1,0 +1,197 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #17A2B8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    margin-top: 5px;
+    padding: 5px 10px 5px 10px;
+    font-size: 18px;
+    transition: 1s all;
+}
+
+.form {
+    overflow: hidden;
+    background: #F8F9FA;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.form_header {
+    color: #F8F9FA;
+    padding: 20px 50px 20px 50px;
+    border-bottom: 2px solid black;
+    background: #007BFF;
+
+}
+
+.form_body {
+    padding: 10px 30px 20px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.marginTop:not(:first-child) {
+    margin-top: 10px;
+}
+.marginTop:last-child {
+    margin-top: 35px;
+}
+
+.choose_item {
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 19px;
+}
+select option {
+    padding: 10px;
+}
+
+.form_footer {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+.form_footer button{
+    font-size: 19px;
+    color: #C2F0EE;
+    background: #F8F9FA;
+    border: 2px solid #C2F0EE;
+    border-radius: 5px;
+    padding: 5px 50px 5px 50px;
+    transition: 0.4s all;
+}
+
+.button_hover {
+    border: 2px solid #17A2B8!important;
+    color: white;
+}
+
+.form_footer .button_hover:hover {
+    color: #F8F9FA;
+    background: #17A2B8;
+}
+
+/*-------------------MODAL-----------------------*/
+.modal_wrapper {
+    transition: 0.5s all;
+    max-height: 0;
+    overflow: hidden;
+    background: rgba(0,0,0,.3);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.modal {
+    border: 2px solid black;
+    border-radius: 5px;
+    background: #F8F9FA;
+    padding: 10px 10px 30px 10px;
+}
+.modal div {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
+
+.modal_btn {
+    font-size: 10px;
+    padding: 5px;
+}
+
+/*-------------------JS--------------------*/
+.hidden {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s all;
+    display: flex;
+    flex-direction: column;
+}
+.valid {
+    border: 2px solid limegreen;
+}
+
+.nonValid {
+    border: 2px solid red;
+}
+
+.alert {
+    display: block;
+    cursor: default;
+    transition: 1s all;
+    text-align: center;
+    font-size: 20px;
+    color: red;
+    opacity: 0;
+}
+/*!*-------------CHOISE--PRODUCT--------------------*!*/
+
+.selectBox {
+    position: relative;
+}
+
+.selectBox select {
+    width: 100%;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#checkboxes {
+    background: #F8F9FA;
+    position: absolute;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s all;
+    border: 2px #dadada solid;
+}
+
+#checkboxes label {
+    font-size: 19px;
+    padding: 5px;
+    padding-left: 20px;
+    border-bottom: 2px solid #18A2B8;
+    display: block;
+}
+#checkboxes label input{
+    margin-right: 10px;
+
+}
+
+#checkboxes label:hover {
+    background-color: #1e90ff;
+}
+
+/*!*-------------MEDIA--------------------*!*/
+@media screen and (max-width: 324px) {
+    form {
+        height: 99vh;
+        width: 100%;
+        overflow: hidden;
+    }
+
+}

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="shortcut icon" href="./img/favicon.ico">
+	<link rel="stylesheet" href="./css/style.css">
+	<title>Form</title>
+</head>
+<body>
+<div class="modal_wrapper">
+	<div class="modal">
+		<div>
+			<button class="modal_btn">&times;</button>
+		</div>
+		<h2>Ваша заявка принята, с вами свяжутся в течение 2-х часов</h2>
+	</div>
+</div>
+<form method="post" class="form" id="form">
+	<div class="form_header">
+		<h2>Отправить заявку</h2>
+	</div>
+	<div class="marginTop form_body">
+		<div class="hidden">
+			<label class="marginTop">Имя</label>
+			<input name="name" placeholder="Имя" class="input_name" type="text"/>
+			<label class="marginTop">Должность</label>
+			<input name="post" placeholder="Должность" class="input_job" type="text"/>
+		</div>
+		<label class="marginTop">Номер телефона*</label>
+		<input  name="phone" placeholder="+7(___)___-__-__" id='phoneMask' class="input_telephone" type="tel"/>
+		<label class="marginTop">E-mail*</label>
+		<input name="email" id='email' placeholder="E-mail" class="input_email" type="email"/>
+		<label class="marginTop">Выберите товар*</label>
+		<div class="multiselect">
+			<div class="selectBox" onclick="showCheckboxes()">
+				<select>
+					<option style="display: none"></option>
+				</select>
+				<div class="overSelect"></div>
+			</div>
+			<div style="position: relative">
+				<div id="checkboxes">
+				<label for="one">
+					<input name="product1" value="Арбуз" type="checkbox" id="one" />Арбуз</label>
+				<label for="two">
+					<input name="product2" value="Банан"  type="checkbox" id="two" />Банан</label>
+				<label for="three">
+					<input name="product3" value="Мандарин" type="checkbox" id="three" />Мандарин</label>
+			</div>
+			</div>
+		</div>
+	</div>
+	<div class="marginTop form_footer">
+		<button type="submit" class="button_hover">Отправить</button>
+	</div>
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="./js/jquery.maskedinput.min.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
