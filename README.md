@@ -1,1 +1,1 @@
-# js_form
+# Follow to https://flexwappa.github.io/js_form/
