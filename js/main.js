@@ -133,7 +133,6 @@ $(document).ready(function() {
 			return result === 0 ? true : false
 		},
 		isEmpty() {
-				console.log(Object.keys(this.form))
 				const formKeysArray = Object.keys(this.form).slice(2, 5)
 				let result = 0
 				for (const key of formKeysArray) {
@@ -188,7 +187,6 @@ $(document).ready(function() {
 						button.classList.add('button_hover')
 					}
 				} else {
-					console.dir(e.target)
 					if(e.target.type !== 'checkbox') {
 						e.target.classList.add('nonValid')
 						button.disabled = true
@@ -205,21 +203,39 @@ $(document).ready(function() {
 // ----------------PHONE--MASK------------------//
 	$('#phoneMask').mask('+7(999)999-99-99');
 // ----------------AJAX------------------//
-	$("#form").submit(function() {
-		$.ajax({
-			type: "POST",
-			url: "rest.php",
-			data: $(this).serialize()
-		}).done(function() {
 
+
+		//-----FOR--GITHUB----//
+	button.addEventListener("click", (e) => {
+    	e.preventDefault()
+		setTimeout(() => {
 			modalWindow.style.maxHeight = "100vh"
 			for (let i = 0; i <= form.length-1; i++){
 				selectBox.classList.remove('valid')
 				form[i].classList.remove('valid')
 				form[i].value = "";
 			}
-		});
-		return false;
-	});
+		}, 1000 )
+    })
+
+
+		//-----FOR--Bitrix24----//
+		
+	// $("#form").submit(function() {
+	// 	$.ajax({
+	// 		type: "POST",
+	// 		url: "rest.php",
+	// 		data: $(this).serialize()
+	// 	}).done(function() {
+
+	// 		modalWindow.style.maxHeight = "100vh"
+	// 		for (let i = 0; i <= form.length-1; i++){
+	// 			selectBox.classList.remove('valid')
+	// 			form[i].classList.remove('valid')
+	// 			form[i].value = "";
+	// 		}
+	// 	});
+	// 	return false;
+	// });
 
 });
