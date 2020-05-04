@@ -207,15 +207,18 @@ $(document).ready(function() {
 
 		//-----FOR--GITHUB----//
 	button.addEventListener("click", (e) => {
-    	e.preventDefault()
-		setTimeout(() => {
-			modalWindow.style.maxHeight = "100vh"
-			for (let i = 0; i <= form.length-1; i++){
-				selectBox.classList.remove('valid')
-				form[i].classList.remove('valid')
-				form[i].value = "";
-			}
-		}, 1000 )
+		e.preventDefault()
+		if(!state.isEmpty() && state.isApproved) {
+
+			setTimeout(() => {
+				modalWindow.style.maxHeight = "100vh"
+				for (let i = 0; i <= form.length-1; i++){
+					selectBox.classList.remove('valid')
+					form[i].classList.remove('valid')
+					form[i].value = "";
+				}
+			}, 1000 )
+		}
     })
 
 
